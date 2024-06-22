@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* --main-color: #ccc; */
+    --main-color: rgb(37, 200, 232);;
+}

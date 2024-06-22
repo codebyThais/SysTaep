@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thais Almeida" url="https://github.com/codebyThais">
+    <!-- BOOTSTRAP CSS & ICONS -->
+    <link rel="stylesheet" href="/libs/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/libs/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="/assets/css/global/style.css">
+    <!-- CSS Local -->
+    <link rel="stylesheet" href="/assets/css/register.css">
+
+    <title>Cadastro</title>
+
+</head>
+<body>
+
+    <form class="form-register" action="">
+        <!-- Full Name -->
+        <label for="fullName">Nome Completo:</label>
+        <input type="text" id="fullName" name="fullName" required maxlength="60">
+        <span id="charLimitMessage" style="color: red;"></span><br>
+        <!-- Birthday -->
+         <label for="birthday">Data de Nascimento:</label>
+        <input type="text" id="birthday" name="birthday" required><br>
+        <!-- CPF -->
+         <label for="cpf">Cpf:</label>
+         <input type="text" id="cpf" name="cpf" required>
+        <!-- Phone -->
+        <label>Tipo de Telefone:</label>
+        <input type="radio" id="landline" name="typePhone" value="landline">
+        <label for="landline">(Fixo) 0000-0000</label>
+        <input type="radio" id="cellPhone" name="typePhone" value="cellPhone" checked>
+        <label for="cellPhone">(Celular) 90000-0000</label><br>
+
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="(00) 90000-0000" required><br>
+        <!-- Email -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="email@email.com" required><br>
+        <!-- Address -->
+        <label>Endereço:</label>
+        <input type="radio" id="tyA-M" name="typeAddress" value="tyA-M">
+        <label for="tyA-M">Manual</label>
+        <input type="radio" id="tyA-Cep" name="typeAddress" value="tyA-Cep" checked>
+        <label for="tyA-Cep">Cep</label>
+    
+        <containerTYA-CEP id="containerTYA-CEP">
+            <!-- Type - Search by CEP -->
+            <label for="cep">CEP:</label>
+            <input type="search" class="cep" id="cep-s" name="cep" required onsearch="clearErrorMessage()">
+            <button type="button" onclick="searchAddress()">Buscar</button>
+            <span id="cepNotFound" style="color: red;"></span><br>
+    
+            <label for="state">Estado:</label>
+            <input type="text" id="state" name="state" readonly><br>
+    
+            <label for="city">Cidade:</label>
+            <input type="text" id="city" name="city" readonly><br>
+    
+            <label for="district">Bairro:</label>
+            <input type="text" id="district" name="district" readonly><br>
+    
+            <label for="address-l">Logradouro:</label>
+            <input type="text" id="address-l" name="address-l" readonly><br>
+    
+            <label for="number">Número:</label>
+            <input type="text" id="number" name="number" required maxlength="6"><br>
+    
+            <label for="addressComplement">Complemento:</label>
+            <input type="text" id="addressComplement" name="addressComplement" required maxlength="50"><br>
+        </containerTYA-CEP>
+        
+        <containerTYA-M id="containerTYA-M">
+            <!-- Type - Seach Manual -->
+            <label for="cep">CEP:</label>
+            <input type="text" class="cep" id="cep-m" name="cep-m" required><br>
+        
+            <div class="wrapper state-wrapper">
+            <div class="select-btn">
+                <span>Selecione um estado</span>
+            </div>
+            <div class="content">
+                <div class="search">
+                    <input spellcheck="false" type="text" placeholder="Pesquisar...">
+                </div>
+                <ul class="options"></ul>
+            </div>
+            </div><br><br><br><br><br><br>
+        
+            <div class="wrapper city-wrapper">
+            <div class="select-btn" id="city-sm">
+                <span>Selecione uma cidade</span>
+                </div>
+                <div class="content">
+                <div class="search">
+                    <input spellcheck="false" type="text" placeholder="Selecione um estado primeiro!">
+                </div>
+                <ul class="options"></ul>
+            </div>
+            </div><br><br><br><br><br><br>
+        
+            <label for="district-m">Bairro:</label>
+            <input type="text" id="district-m" name="district-m" required maxlength="30"><br>
+    
+            <label for="address-lm">Logradouro:</label>
+            <input type="text" id="address-lm" name="address-lm" required maxlength="30"><br>
+        
+            <label for="number-m">Número:</label>
+            <input type="text" id="number-m" name="number-m" required maxlength="6"><br>
+        
+            <label for="addressComplement-m">Complemento:</label>
+            <input type="text" id="addressComplement-m" name="addressComplement-m" required maxlength="50"><br>
+        </containerTYA-M>
+
+        <input type="reset" id="reset" value="Limpar Dados">
+        <input type="submit" id="submit">
+    
+    </form>
+
+    <!-- JS Global -->
+    <script src="/assets/js/global/script.js"></script>
+    <!-- JS Local -->
+    <script src="/assets/js/register.js"></script>
+    <!-- jQuery -->
+    <script src="/libs/JQuery.txt"></script>
+    <!-- jQuery Mask Plugin -->
+    <script src="/libs/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="/libs/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

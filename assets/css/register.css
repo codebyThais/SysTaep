@@ -1,0 +1,34 @@
+.wrapper { position: relative; }
+.select-btn { cursor: pointer; padding: 10px; border: 1px solid #ccc; }
+.content { display: none; position: absolute; background: #fff; border: 1px solid #ccc; width: 100%; max-height: 150px; overflow-y: auto; }
+.active .content { display: block; }
+.options li { padding: 10px; cursor: pointer; }
+.options li:hover { background: #f0f0f0; }
+.search { padding: 10px; }
+.search input { width: calc(100% - 20px); padding: 5px; }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/loginSignup/libs/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}

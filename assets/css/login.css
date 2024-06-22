@@ -1,0 +1,162 @@
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/libs/fonts/Poppins/Poppins-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url(/assets/img/3pessoasLOGO+1.svg);
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#backIxButton {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 105px;
+    color: var(--main-color);
+    background-color: black;
+}
+
+#backIxButton:hover {
+    background-color: #28a745;
+    border: none;
+    color: white;
+}
+
+.form-login {
+    font-family: 'Poppins', sans-serif;
+    width: 400px;
+    height: 400px;
+    margin-top: 20%;
+    padding: 20px;
+    border: 4px solid var(--main-color);
+    border-radius: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+#login-IuserLock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 35%;
+    top: -70px;
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    border: solid 0.2rem;
+    color: var(--main-color);
+    font-size: 4rem;
+    border-radius: 50%;
+}
+
+.form-login h3 {
+    font-weight: 800;
+    font-size: 35px;
+    color: black;
+    position: relative;
+    margin-top: -110px;
+    cursor: default;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"] {
+    background-color: rgba(11, 160, 201, 0.71);
+    color: white;
+    border: solid black;
+    width: 320px;
+    position: relative;
+    right: -30px;
+    top: -25px;
+}
+
+.form-login input[type="text"]::placeholder,
+.form-login input[type="password"]::placeholder {
+    color: white;
+}
+
+.form-login input[type="text"]::placeholder,
+.form-login input[type="password"]::placeholder {
+    color: #666;
+}
+
+#password {
+    top: -50px;
+}
+
+#login-Iuser {
+    position: relative;
+    left: -4%;
+    top: 30px;
+    font-size: 2.5rem;
+}
+
+#togglePassword {
+    position: relative;
+    left: -3%;
+    top: -5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.form-check {
+    position: fixed;
+    top: 225px;
+    left: 20px;
+}   
+
+.form-check input{
+    cursor: pointer;
+    border: solid;
+}
+
+.form-check input[type="checkbox"]:checked {
+    background-color: #28a745;
+    border-color: black;
+}
+
+#btn-login {
+    position: fixed;
+    top: 270px;
+    background-color: #6c757d;
+    border: none;
+    width: 350px;
+}
+
+#btn-login:hover {
+    background-color: #28a745;
+}
+
+#forgotButton {
+    position: fixed;
+    top: 330px;
+    left: 20px;
+    padding: 0;
+    width: 160px;
+    text-decoration: none;
+}
+
+#forgotButton:hover, #registerButton:hover {
+    color: #670d0d;
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    min-height: calc(85% - 1rem);
+}
